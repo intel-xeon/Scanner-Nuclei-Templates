@@ -3,6 +3,7 @@
 
 <code>go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest</code>
 
+Next to {{BaseURL}} in the YAML file, add the path by specifying the location where you want to inject the payload. Use the placeholder "FUZZ" to indicate to Nuclei where the payloads should be inserted.
 
 <h2>Usage</h2>
 
