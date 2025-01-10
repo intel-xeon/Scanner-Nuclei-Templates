@@ -25,3 +25,4 @@ requests:
         regex:
           - "root:.*:0:0:"
           - "; for 16-bit app support"
+          - "RewriteEngine On"
