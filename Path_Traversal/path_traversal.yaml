@@ -1,0 +1,21 @@
+id: Path_Traversal
+
+info:
+  name: Path Traversal Payloads
+  author: topscoder
+  severity: high
+  description: >
+    Path Traversal with multiple payloads.
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/image?filename={{FUZZ}}"
+    payloads:
+      FUZZ: path_traversal.txt
+#    matchers-condition: and
+    matchers:
+      - type: regex
+        regex:
+          - "root:.*:0:0:"
+          - "; for 16-bit app support"
