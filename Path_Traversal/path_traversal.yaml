@@ -2,7 +2,7 @@ id: Path_Traversal
 
 info:
   name: Path Traversal Payloads
-  author: topscoder
+  author: Luca Marsilia
   severity: high
   description: >
     Path Traversal with multiple payloads.
