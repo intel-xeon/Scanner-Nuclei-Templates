@@ -1,0 +1,23 @@
+id: SSRF
+
+info:
+  name: SSRF Raw Request
+  author: Luca Marsilia
+  severity: critical
+
+requests:
+  - raw:
+    -  |
+        GET /?searchUrl={{FUZZ}} HTTP/1.1
+        Host: {{Hostname}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Connection: close
+        Upgrade-Insecure-Requests: 1
+        Content-Length: 205
+    payloads:
+      FUZZ: ssrf.txt    
+    matchers:
+      - type: word
+        part: interactsh_protocol # Confirms the DNS Interaction
+        words:
+          - "dns"
