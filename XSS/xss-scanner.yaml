@@ -16,7 +16,7 @@ headless:
         name: reflected_param_query
 
     payloads:
-      FUZZ: {{file:/nuclei/payloads.txt}}
+      FUZZ: {{file:https://raw.githubusercontent.com/intel-xeon/Scanner-Nuclei-Templates/refs/heads/main/XSS/payloads.txt}}
 
 
     matchers:
