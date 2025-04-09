@@ -16,7 +16,7 @@ headless:
         name: reflected_param_query
 
     payloads:
-      FUZZ: payloads.txt
+      FUZZ: /nuclei/payloads.txt
 
 
     matchers:
