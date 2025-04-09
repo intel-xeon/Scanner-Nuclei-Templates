@@ -16,7 +16,7 @@ headless:
         name: reflected_param_query
 
     payloads:
-      FUZZ: {{file:/nuclei/payloads.txt}}
+      FUZZ: payloads.txt
 
 
     matchers:
