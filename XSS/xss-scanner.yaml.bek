@@ -9,7 +9,7 @@ info:
 headless:
   - steps:
       - args:
-          url: "{{BaseURL}}/?search={{FUZZ}}"
+          url: "{{BaseURL}}/post?postId={{FUZZ}}"
         action: navigate
 
       - action: waitdialog
