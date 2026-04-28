@@ -1,0 +1,816 @@
+name: Nuclei Scan Parallelo XSS
+'on':
+  workflow_dispatch: {}
+jobs:
+  nuclei-scan1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1,30p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan1\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '31,60p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan2\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '61,90p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan3\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan4:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '91,120p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan4\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan5:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '121,150p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan5\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan6:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '151,180p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan6\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan7:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '181,210p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan7\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan8:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '211,240p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan8\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan9:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '241,270p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan9\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan10:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '271,300p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan10\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan11:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '301,330p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan11\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan12:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '331,360p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan12\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan13:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '361,390p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan13\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan14:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '391,420p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan14\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan15:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '421,450p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan15\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan16:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '451,480p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan16\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan17:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '481,510p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan17\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan18:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '511,540p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan18\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan19:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '541,570p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan19\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan20:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '571,600p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan20\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan21:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '601,630p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan21\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan22:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '631,660p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan22\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan23:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '661,690p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan23\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan24:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '691,720p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan24\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan25:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '721,750p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan25\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan26:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '751,780p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan26\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan27:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '781,810p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan27\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan28:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '811,840p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan28\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan29:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '841,870p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan29\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan30:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '871,900p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan30\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan31:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '901,930p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan31\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan32:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '931,960p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan32\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan33:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '961,990p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan33\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan34:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '991,1020p' payloads.txt > payloads-group.txt;mv payloads-group.txt payloads.txt;touch\
+        \ result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan34\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan35:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1021,1050p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan35\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan36:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1051,1080p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan36\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan37:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1081,1110p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan37\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan38:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1111,1140p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan38\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan39:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1141,1170p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan39\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan40:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1171,1200p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan40\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan41:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1201,1230p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan41\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan42:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1231,1260p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan42\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan43:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1261,1290p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan43\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan44:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1291,1320p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan44\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan45:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1321,1350p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan45\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan46:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1351,1380p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan46\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan47:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1381,1410p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan47\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan48:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1411,1440p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan48\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan49:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1441,1470p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan49\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan50:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1471,1500p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan50\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan51:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1501,1530p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan51\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan52:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1531,1560p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan52\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan53:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1561,1590p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan53\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan54:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1591,1620p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan54\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan55:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1621,1650p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan55\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan56:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1651,1680p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan56\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan57:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1681,1710p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan57\
+        \  && exit 141; sleep 5; done; exit 0\n            "
+  nuclei-scan58:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Run nuclei scan
+      run: "mkdir nuclei-output;git clone https://github.com/projectdiscovery/nuclei.git;cd\
+        \ nuclei/cmd/nuclei;go build;mv nuclei /usr/local/bin/;nuclei -version;git\
+        \ clone https://github.com/intel-xeon/Scanner-Nuclei-Templates.git;cd Scanner-Nuclei-Templates/XSS;sed\
+        \ -n '1711,1740p' payloads.txt > payloads-group.txt;mv payloads-group.txt\
+        \ payloads.txt;touch result.txt; nuclei -target https://0afe00dd041419988194eebb00870094.web-security-academy.net\
+        \ -sc -t xss-scanner.yaml -headless -o result.txt & for x in $(seq 360); do\
+        \ [ \"$(wc -l < result.txt)\" -gt 0 ] && curl -k -s https://fvghyjuhygtf.requestcatcher.com/nuclei-scan58\
+        \  && exit 141; sleep 5; done; exit 0\n            "
